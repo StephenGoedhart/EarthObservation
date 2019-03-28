@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +57,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Models\TempCSV.cs" />
+    <Compile Include="Vendors\EO\EODataHandler.cs" />
+    <Compile Include="Vendors\Old\Centroid.cs" />
+    <Compile Include="Vendors\Old\ClusterResult.cs" />
+    <Compile Include="Vendors\ImageUtilities\ImageUtilities.cs" />
+    <Compile Include="Vendors\Old\KMeansCalculator.cs" />
+    <Compile Include="Vendors\Old\KmeansImageProcessing.cs" />
+    <Compile Include="Vendors\Old\Vector.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +104,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\EO\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
