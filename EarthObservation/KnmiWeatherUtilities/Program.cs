@@ -20,8 +20,6 @@ namespace KnmiWeatherUtilities
                 EndDate = new DateTime(2015, 01, 31), Variables = new[] {"TG", "PG"}
             };
             var result = request.ExecuteRequest(new KnmiDataRequestParser(parameters), new FormUrlEncodedContent(parameters.ToDictionary()));
-            var data = result.GetDataBetween(KnmiVariables.TG, new DateTime(2015, 1, 5), new DateTime(2015, 1, 10));
-
         }
 
     }
